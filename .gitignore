@@ -1,0 +1,61 @@
+# Ignore build results
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IIS Express config
+/.vs/
+config/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.cache
+
+# NuGet packages
+packages/
+*.nupkg
+project.lock.json
+
+# AngularJS/Node.js dependencies
+node_modules/
+wwwroot/node_modules/
+wwwroot/dist/
+
+# Visual Studio Code settings
+.vscode/
+
+# Rider/JetBrains settings
+.idea/
+
+# Backup files
+*.bak
+*_Backup.*
+*.orig
+*.swp
+
+# Deployment files
+.publish/
+*.publishsettings
+
+# Entity Framework migrations binary files
+Migrations/*.Designer.cs
+
+# Database and sensitive files
+*.mdf
+*.ldf
+appsettings.json
+appsettings.*.json
+.env
+.env.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini

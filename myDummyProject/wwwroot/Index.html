@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app="ProductApp">
+<head>
+    <title>Product Management</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="ProductController">
+    <h1>Product Management</h1>
+    <form ng-submit="addProduct()">
+        <input type="text" ng-model="newProduct.Name" placeholder="Name" required>
+        <input type="number" ng-model="newProduct.Price" placeholder="Price" required>
+        <input type="number" ng-model="newProduct.Stock" placeholder="Stock" required>
+        <button type="submit">Add Product</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in products">
+                <td>{{ product.Name }}</td>
+                <td>{{ product.Price }}</td>
+                <td>{{ product.Stock }}</td>
+                <td>
+                    <button ng-click="updateProduct(product)">Update</button>
+                    <button ng-click="deleteProduct(product.Id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
